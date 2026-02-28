@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 
 
 const sendOtp = async(email,otp) => {
-  const imfo = await transporter.sendMail({
+  const info = await transporter.sendMail({
     from: `"Gmail Verification" <${process.env.EMAIL}>`,
     to: email,
     subject: 'Your OTP Code',
